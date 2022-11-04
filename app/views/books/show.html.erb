@@ -1,0 +1,40 @@
+<h1>Thông tin chi tiết</h1>
+<table class = "table table-striped table-bordered table-hover">
+  <thead class = "thead-dark">
+    <tr>
+      <th>Mã học sinh</th>
+      <th>Tên học sinh</th>
+      <th>Mã sách</th>
+      <th>Tên sách</th>
+      <th>Tủ sách</th>
+      <th>Ngày mượn</th>
+      <th>Ngày trả</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+     
+    
+      <tr>
+        <td><%= @book.maHS%></td>
+      <td><%= @book.tenHS%></td>
+        <td><%= @book.maSach%></td>
+         <td><%= @book.tenSach%></td>
+          <td><%= @book.tuSach%></td>
+           <td><%= @book.ngayMuon%></td>
+            <td><%= @book.ngayTra%></td>
+        <td>
+          <%= link_to "Show", @book, class:"btn btn-dark" %>
+        </td>
+          <td>
+          <%= link_to "Edit", edit_book_path(@book), class:"btn btn-warning" %>
+        </td>
+         <td>
+           <%= button_to "Destroy ", @book, method: :delete, data: {confirm: 'Are you sure?'}, class:"btn btn-danger" %>
+        </td>
+      </tr>
+   
+  </tbody>
+</table>
+
+

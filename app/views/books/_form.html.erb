@@ -1,0 +1,52 @@
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :maHS, style: "display: block" %>
+    <%= form.text_field :maHS, class:"form-control", placeholder:'Nhập mã học sinh' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tenHS, style: "display: block" %>
+    <%= form.text_field :tenHS, class:"form-control", placeholder:'Nhập tên học sinh' %>
+  </div class="form-group">
+
+  <div class="form-group">
+    <%= form.label :maSach, style: "display: block" %>
+    <%= form.text_field :maSach, class:"form-control", placeholder:'Nhập mã sách' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tenSach, style: "display: block" %>
+    <%= form.text_field :tenSach, class:"form-control", placeholder:'Nhập tên sách' %>
+  </div >
+
+  <div class="form-group">
+    <%= form.label :tuSach, style: "display: block" %>
+    <%= form.text_field :tuSach, class:"form-control", placeholder:'Nhập tủ sách' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :ngayMuon, style: "display: block" %>
+    <%= form.datetime_field :ngayMuon, class:"form-control", placeholder:'Chọn ngày' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :ngayTra, style: "display: block" %>
+    <%= form.datetime_field :ngayTra, class:"form-control", placeholder:'Chọh ngày trả' %>
+  </div>
+
+  <div>
+    <%= form.submit class:'btn btn-success'%>
+  </div>
+<% end %>

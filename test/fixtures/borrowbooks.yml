@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maHS: MyString
+  tenHS: MyString
+  maSach: MyString
+  tenSach: MyString
+  tuSach: MyString
+  ngayMuon: MyString
+  ngayTra: MyString
+
+two:
+  maHS: MyString
+  tenHS: MyString
+  maSach: MyString
+  tenSach: MyString
+  tuSach: MyString
+  ngayMuon: MyString
+  ngayTra: MyString
